@@ -27,12 +27,12 @@ export class App extends Component {
   componentDidUpdate(prevProps, prevState) {
     // console.log('App componentDidUpdate');
     if (this.state.contacts !== prevState.contacts) {
-      console.log('Обновились контакты');
+      // console.log('Обновились контакты');
       localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
     }
   }
 
-  formSubmitHandler = ({ name, number }) => {
+  formSubmitHandler = (name, number) => {
     const { contacts } = this.state;
     const id = nanoid(5);
     const contact = {

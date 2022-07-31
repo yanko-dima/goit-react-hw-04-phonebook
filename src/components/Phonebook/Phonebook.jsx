@@ -5,6 +5,7 @@ import css from 'components/Phonebook/Phonebook.module.css';
 export default function Phonebook(onSubmit) {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
+  // const user = { name, number };
 
   const handleChange = e => {
     const { name, value } = e.target;
@@ -24,7 +25,9 @@ export default function Phonebook(onSubmit) {
   const handleSubmit = e => {
     e.preventDefault();
 
-    onSubmit({ name, number });
+    console.log('name: ', name);
+    console.log('number: ', number);
+    onSubmit = { name, number };
     reset();
   };
 
