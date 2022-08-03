@@ -24,10 +24,11 @@ export default function Phonebook(onSubmit) {
 
   const handleSubmit = e => {
     e.preventDefault();
+    const state = { name, number };
 
     console.log('name: ', name);
     console.log('number: ', number);
-    onSubmit = { name, number };
+    onSubmit(state);
     reset();
   };
 
