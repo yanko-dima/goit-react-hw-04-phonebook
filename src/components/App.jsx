@@ -32,10 +32,10 @@ export default function App() {
   };
 
   const getVisibleContacts = () => {
-    const normalizedFilter = filter.toLowerCase();
+    // const normalizedFilter = filter.toLowerCase();
 
     return contacts.filter(contact =>
-      contact.name.toLowerCase().includes(normalizedFilter)
+      contact.name.toLowerCase().includes(filter.toLowerCase())
     );
   };
 
