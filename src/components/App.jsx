@@ -40,16 +40,7 @@ export default function App() {
   };
 
   const deleteContact = contactId => {
-    setContacts(contacts => {
-      contacts.filter(contact => console.log(contact.id !== contactId));
-    });
-
-    // console.log(`Delete contact id: ${contactId}`);
-    // console.log(`contacts: `, contacts);
-
-    // this.setState(prevState => ({
-    //   contacts: prevState.contacts.filter(contact => contact.id !== contactId),
-    // }))
+    setContacts(contacts.filter(contact => contact.id !== contactId));
   };
 
   return (
