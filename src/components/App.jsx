@@ -4,10 +4,10 @@ import Section from 'components/Section';
 import Phonebook from 'components/Phonebook';
 import Filter from './Filter/Filter';
 import Contacts from 'components/Contacts';
-import useLocalStorage from 'components/Hooks';
+import useLocalStorage from 'Hooks';
 
 export default function App() {
-  const [contacts, setContacts] = useLocalStorage('contacts', '');
+  const [contacts, setContacts] = useLocalStorage('contacts', []);
   const [filter, setFilter] = useState('');
 
   const formSubmitHandler = ({ name, number }) => {

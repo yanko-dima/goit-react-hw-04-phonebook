@@ -5,13 +5,12 @@ import Contact from 'components/Contact/Contact';
 const Contacts = ({ contacts, onDeleteContact }) => (
   <ul className={css.contacts__list}>
     {contacts.map(({ id, name, number }) => (
-      <li className={css.contacts__item} key={id}>
-        <Contact
-          name={name}
-          number={number}
-          deleteContact={() => onDeleteContact(id)}
-        />
-      </li>
+      <Contact
+        key={id}
+        name={name}
+        number={number}
+        deleteContact={() => onDeleteContact(id)}
+      />
     ))}
   </ul>
 );
